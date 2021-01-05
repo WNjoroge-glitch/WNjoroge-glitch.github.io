@@ -1,0 +1,171 @@
+:root[color-scheme="light"] {
+    
+    --main-color:hsl(0, 0%, 98%);
+    --surface-color:hsl(236, 33%, 92%);
+    --secondary-color:hsl(233, 11%, 84%);
+    --accent-color:hsl(236, 9%, 61%);
+    --secondary-accent-color:hsl(235, 19%, 35%);
+    --background:url(images/bg-mobile-light.jpg);
+    
+
+}
+:root[color-scheme="dark"] {
+    --main-color:hsl(235, 24%, 19%);
+    --surface-color:hsl(235, 21%, 11%);
+    --secondary-color:hsl(233, 14%, 35%);
+    --accent-color:hsl(234, 11%, 52%);
+    --secondary-accent-color:hsl(234, 39%, 85%);
+    --secondary2-accent-color:hsl(237, 14%, 26%);
+    --background:url(images/bg-mobile-dark.jpg)
+
+
+
+
+}
+:root[color-scheme="light"].light--hidden{
+    display:none;
+}
+:root[color-scheme="dark"].dark--hidden{
+    display:none;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:box-shadow;
+}
+body{
+    font-size:20px;
+}
+
+.active {
+    display:block
+}
+#todo-app-container {
+    background-color:var(--surface-color)
+}
+ul form{
+    margin:20px 0;
+}
+
+ul input[type="text"]{
+    border:none;
+    border-bottom:1px solid black;
+}
+
+ul button{
+    margin-left:10px;
+    border:none;
+    appearance:none;
+    outline:none;
+    background:none;
+
+}
+ul button img {
+    height:10px;
+    width:10px;
+   
+}
+#filter-section{
+    width:100%;
+    height:2rem;
+    display:flex;
+    justify-content: space-around;
+    
+}
+.style-button{
+    border:none;
+    appearance:none;
+    outline:none;
+    background:none;
+}
+#filter-section{
+    background-color:var(--main-color);
+    border-radius:5px;
+    width:30rem;
+    margin:0 auto;
+    
+
+    
+}
+
+#filter-section button:hover {
+    color:hsl(220, 98%, 61%);
+
+}
+
+#main-input-holder{
+   
+    background-image:var(--background);
+    background-size: cover;
+    padding:5rem;
+
+}
+#input-form{
+    position:relative;
+    top:1rem;
+    left:5rem;
+    
+}
+#input-form input {
+    padding:10px 30px;
+    border-radius:5px;
+    outline:none;
+    appearance: none;
+    border:none;
+    
+    
+
+}
+#form-list{
+    background-color:var(--main-color);
+    margin:0 5rem;
+    position:relative;
+    bottom:3rem;
+
+}
+.added-form{
+    padding:10px;
+
+}
+.added-input{
+    margin:0 10px;
+    width:70%;
+    border:none;
+    outline:none;
+    padding:5px;
+    color:var(--secondary-accent-color);
+    background-color:inherit;
+    font-size:20px;
+    
+}
+.checkbox{
+    border-radius:50%;
+    background-image:linear-gradient(rgb(87, 221, 255),rgb(192, 88, 243))
+}
+#icon-sun{
+    margin-left:28rem;
+}
+#task-management-section{
+    display:flex;
+    justify-content: space-between;
+    
+}
+button{
+    color:var(--secondary-accent-color)
+}
+
+@media (min-width:700px){
+    
+        #filter-section{
+            max-width:100%;
+            width:50rem;
+        }
+        #todo-app-container {
+            margin:0 20rem;
+    min-height:100vh;
+
+        }
+    
+    
+}

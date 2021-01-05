@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" color-scheme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="todo-app">
+        <div id="todo-app-container">
+            <div id="main-input-holder">
+                <h1>TO DO</h1>
+                <div class="color-theme-toggle">
+                    <button class="color-mode_btn light--hidden">
+                        <img src="images/icon-sun.svg" alt="" id="icon-sun">
+                    </button>
+                    <button class="color-mode_btn dark--hidden">
+                        <img src="images/icon-moon.svg" alt="">
+                    </button>
+                </div>
+              
+                
+                <form id="input-form" onsubmit="return false">
+                    <input type="text"placeholder="Create a new task" id="input-text">
+                    <button id="task-add-button" class="style-button">Add</button>
+                    
+                </form>
+            </div>
+            
+            <div id ="list-area">
+                <ul id="form-list">
+        
+        
+                    
+                </ul>
+                <div id="task-management-section">
+                    <p><span id="task-number"></span>Tasks left</p>
+                    <button id="task-clear-button" class="style-button">Clear Completed</button>
+                </div>
+            </div>
+            <ul id="form-list">
+        
+            </ul>
+        
+           
+            
+           
+            <div id="filter-section">
+                <button id="all" class="style-button">All</button>
+                <button id="active-button" class="style-button">Active</button>
+                <button id="completed" class="style-button">Completed</button>
+            </div>
+        
+        </div>
+        </div>
+        
+   
+
+    <script src="index.js"></script>
+
+    
+</body>
+</html>
