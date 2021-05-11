@@ -9,8 +9,9 @@
 <body>
     <div class="todo-app">
         <div id="todo-app-container">
-            <div id="main-input-holder">
-                <h1>TO DO</h1>
+            <div class="main-input-holder">
+                <div class="main-heading">
+                <h1 class="heading">todo</h1>
                 <div class="color-theme-toggle">
                     <button class="color-mode_btn light--hidden">
                         <img src="images/icon-sun.svg" alt="" id="icon-sun">
@@ -19,40 +20,47 @@
                         <img src="images/icon-moon.svg" alt="">
                     </button>
                 </div>
+            </div>
               
                 
-                <form id="input-form" onsubmit="return false">
-                    <input type="text"placeholder="Create a new task" id="input-text">
+                <form class="input-form" onsubmit="return false">
+                    <input type="text"placeholder="Create a new task" class="input-text">
                     <button id="task-add-button" class="style-button">Add</button>
                     
                 </form>
             </div>
+            <div class="list">
+                <div class="add-list">
+                <div id ="list-area">
+                    <ul id="form-list">
             
-            <div id ="list-area">
-                <ul id="form-list">
-        
-        
+            
+                        
+                    </ul>
+                    <div class="task-management-section">
+                        <p><span id="task-number"></span>Tasks left</p>
+                        <div class="filter-section">
+                            <button id="all" class="style-button btn">All</button>
+                            <button id="active-button" class="style-button btn">Active</button>
+                            <button id="completed" class="style-button btn">Completed</button>
+                        </div>
+                        <button id="task-clear-button" class="style-button">Clear Completed</button>
+                    </div>
                     
-                </ul>
-                <div id="task-management-section">
-                    <p><span id="task-number"></span>Tasks left</p>
-                    <button id="task-clear-button" class="style-button">Clear Completed</button>
                 </div>
-            </div>
-            <ul id="form-list">
-        
-            </ul>
-        
-           
+                
             
-           
-            <div id="filter-section">
-                <button id="all" class="style-button">All</button>
-                <button id="active-button" class="style-button">Active</button>
-                <button id="completed" class="style-button">Completed</button>
+               
+                
+               
+               
+            
             </div>
-        
         </div>
+            </div>
+            </div>
+            
+            
         </div>
         
    
