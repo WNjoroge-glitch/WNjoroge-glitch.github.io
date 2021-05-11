@@ -1,14 +1,14 @@
-window.onload = () => {
-    const task_btn = document.getElementById("task-add-button")
-    const ul = document.getElementById("form-list")
-    const form_input = document.getElementById("input-form")
-    const clear_btn = document.getElementById("task-clear-button")
-    const input_text = document.getElementById("input-text")
-    const span = document.getElementById("task-number")
-    const activeB = document.getElementById("active-button")
-    const completeBtn = document.getElementById("completed")
-    const allTasks = document.getElementById("all")
-    const filter = document.getElementById("filter-section")
+const task_btn = document.querySelector("#task-add-button")
+const ul = document.querySelector("#form-list")
+const form_input = document.querySelector(".input-form")
+const clear_btn = document.querySelector("#task-clear-button")
+const input_text = document.querySelector(".input-text")
+const span = document.querySelector("#task-number")
+const activeB = document.querySelector("#active-button")
+const completeBtn = document.querySelector("#completed")
+const allTasks = document.querySelector("#all")
+const filter = document.querySelector(".filter-section")
+
     
 
 
@@ -18,13 +18,14 @@ addElements=() =>{
     const list =document.createElement("list")
     const form = document.createElement("form")
     const image = document.createElement("img")
-
     const checkbox_input = document.createElement("input")
     const text_input = document.createElement("input")
     const button = document.createElement("button")
 
     text_input.classList.add("added-input")
     checkbox_input.classList.add("checkbox")
+    button.classList.add('style-button')
+    form.classList.add('form')
     
     checkbox_input.setAttribute('type','checkbox')
     
@@ -48,21 +49,20 @@ addElements=() =>{
 clear_btn.addEventListener("click", function(){
     if (checkbox_input.checked){
         form.remove()
+        span.textContent = ul.children.length
     } else {
         return false
     }
 
 })
-    
-
-    
-
 }
 
 task_btn.addEventListener("click", function(){
     addElements()
+    span.textContent = ul.children.length
     
 })
+
 
 
 
@@ -71,17 +71,11 @@ task_btn.addEventListener("click", function(){
 ul.addEventListener('click', function(event){
     
     target = event.target;
-    if(target.checked){
-        target.nextSibling.style.textDecoration = "line-through"
-    } else {
-        target.nextSibling.style.textDecoration="none"
-    }
-
-    
-
-
+    target.checked ? target.nextSibling.style.textDecoration = "line-through" : target.nextSibling.style.textDecoration="none";
 })
 //filter tasks according to completed
+
+
 
 
 function filterTasks(){
@@ -90,8 +84,6 @@ function filterTasks(){
   var checkbox =todo[i].firstChild
   var form = todo[i]
   
-
-
   if (checkbox.checked){
       form.style.display="none";
       
@@ -100,9 +92,6 @@ function filterTasks(){
       
   }
     }
-
-   
-
 }
 function filterCompleted(){
     const todo =  ul.children
@@ -110,9 +99,7 @@ function filterCompleted(){
   var checkbox =todo[i].firstChild
   var form = todo[i]
   
-
-
-  if (checkbox.checked){
+if (checkbox.checked){
       form.style.display="block";
       
   }else {
@@ -163,6 +150,8 @@ function toggleColor(e){
     if(e.currentTarget.classList.contains("light--hidden")){
         document.documentElement.setAttribute("color-scheme", "light")
         
+
+        
     } else{
         document.documentElement.setAttribute("color-scheme","dark")
 }
@@ -177,7 +166,10 @@ function toggleColor(e){
 
 
 
-}
+
+
+
+
 
 
 
